@@ -3,7 +3,7 @@
 """
 import os
 from typing import Optional
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     
     # Ollama настройки
     ollama_base_url: str = "http://localhost:11434"
-    ollama_model: str = "gemma2:9b"
+    ollama_model: str = 'PetrosStav/gemma3-tools:12b' # "gemma3-abliterated:12b"
     
     # Настройки поиска
     duckduckgo_max_results: int = 10
